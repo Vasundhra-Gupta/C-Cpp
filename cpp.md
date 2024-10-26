@@ -697,7 +697,7 @@ Head points to the tip of current branch
     git branch <name> (create branch)
     git switch <name> (switch)
     git switch -c <name> (create and switch)
-    git
+    git checkout <name> (switch)
 ```
 </body>
 </html>
