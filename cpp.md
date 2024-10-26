@@ -699,6 +699,7 @@ Head points to the tip of current branch
     git switch -c <name> (create and switch)
     git checkout <name> (switch)
 ```
+When changes are diffrent in files then, merge conflicts arises.
 </body>
 </html>
 
