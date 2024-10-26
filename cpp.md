@@ -697,10 +697,10 @@ Head points to the tip of current branch
     git branch <name> (create branch)
     git switch <name> (switch)
     git switch -c <name> (create and switch)
-    git checkout <branchName> (switch the branch)
+    git checkout <name> (switch)
 ```
+When changes are diffrent in files then, merge conflicts arises.
 
-HEllo evryne
 </body>
 </html>
 
