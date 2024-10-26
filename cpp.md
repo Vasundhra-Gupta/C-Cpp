@@ -642,6 +642,17 @@
     <li>conio.h header file used in C programming language contains functions for console input/output. Some of its most commonly used functions are clrscr, getch, getche, kbhit etc</li>
 
 ### git init -> Working Directory ---> git add -> staging area ---> git commit --> Repo --> git push --> Github
+```
+    git config --global user.name "" user.email ""
+    git config --list 
+    git log (To check details about commit)
+    git log --oneline
+```
+- Since git has VIM as its default editor, which is not that easy to handle, so set vs code as its default code editor.
+    For that, we need to use the command
+    ```
+        git config --global core.editor "code --wait"
+    ```
 </body>
 </html>
 
