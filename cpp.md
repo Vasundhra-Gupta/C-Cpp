@@ -670,18 +670,32 @@
     - Author
     - Committer
     - Commit Message
+*Example : **commit** 927bf32c829f877c664e512ec5737ef23bfcb5eb, **tree** f3eb325a62bb9c055fd09d55dc1401202dafff19, **parent** 241cc11fa403de46a622f970ad13cfacb4d1445c, **author** vasundhra gupta <vasundhragupta962@gmail.com> 1729966866 +0530, **committer** vasundhra gupta <vasundhragupta962@gmail.com> 1729966866 +0530, modify settings, cpp.md and .gitignore*
+
 - Tree Object (When changes/restore are done, then reference of the tree can be changed)
 - contains:
     - File Mode
     - File name
     - File hash
     - Parent Tree Object
+*Example : 100644  blob  1dcef2d9f2db74bf13c54f973f40239e00717423    .gitignore*
+
 - Blob Object (actual file/code that it need to save)
-
-
 ### Some commands to extract behind the scene Information.
 ```
-    git show -s --pretty=raw <commit-hash>
+    1.  git show -s --pretty=raw <commit-hash> (show commit object, commit hash from git log)
+    2.  git ls-tree <tree-id>  (tree id from commit object, gone to upper folders and files, till get the blob, otherwise it would say not a tree object. (obvious) 😉)
+    3.  git show <blob-id> (blob-id from tree object) **and this shows content of blob by blob-id**
+    4.  git cat-file -p <commit-id> (get wtever next, like tree object or content)
+
+    2nd and 4th doing work in similar way, just going to next, 
+```
+
+Head points to the tip of current branch
+
+```
+    git branch <name> (create branch)
+    git switch <name>
 ```
 </body>
 </html>
