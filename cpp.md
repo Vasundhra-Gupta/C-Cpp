@@ -310,7 +310,7 @@
         </div>
         <li>Classes are extension of structure(in C).</li>
         <li>
-            Structure had limitations in C=> 
+            Structure had limitations in C=>
             <ul>
                 <li>Members are public, No data hiding.</li>
                 <li>Functions can not be included in Structures.</li>
@@ -549,7 +549,7 @@
                 </li>
             </ul>
         </div>
-    </div>  
+    </div>
     <div class="fileIO">
         <h2>File Input and output in C++</h2>
         <ul>
@@ -579,7 +579,7 @@
             <li>We use templates to enhance reusability of code.</li>
             <li>Provide support for generic progamming.</li>
             <li><i>Syntax: </i> template (class dataType>). Here dataType can be int, float, char etc.</li>
-            <li>Since a template is defined with a parameter that would be replaced by a spercified data type at the time of actual use of class/function, So they are sometimes called <b>Parameterised classes or functions.</b></li> 
+            <li>Since a template is defined with a parameter that would be replaced by a spercified data type at the time of actual use of class/function, So they are sometimes called <b>Parameterised classes or functions.</b></li>
             <li>Template with multiple parameters=>template (class T1, class T2)</li>
             <li>Temlate with default arguements=> template (class T1=int, class T2= char)</class></li>
             <li>Outside the class a fn using template can be defined as=>template (class T>) void vasu(T>) :: displayV(){}</li>
@@ -642,53 +642,52 @@
     <li>conio.h header file used in C programming language contains functions for console input/output. Some of its most commonly used functions are clrscr, getch, getche, kbhit etc</li>
 
 ### git init -> Working Directory ---> git add -> staging area ---> git commit --> Repo --> git push --> Github
+
 ```
     git config --global user.name "" user.email ""
-    git config --list 
+    git config --list
     git log (To check details about commit)
     git log --oneline
 ```
-- Since git has VIM as its default editor, which is not that easy to handle, so set vs code as its default code editor.
+
+-   Since git has VIM as its default editor, which is not that easy to handle, so set vs code as its default code editor.
     For that, we need to use the command
+
     ```
         git config --global core.editor "code --wait"
     ```
-    - Example: *When you write **git commit** alone without using message , now instead of vim , it would open in vscode,and wait for ur changes then write commit message in the newly opened file and just close it your commit will be succesfull.*
 
-    - .gitignore file to avoid some file to stay untracked , just write file name in the .gitignore files.
+    -   Example: _When you write **git commit** alone without using message , now instead of vim , it would open in vscode,and wait for ur changes then write commit message in the newly opened file and just close it your commit will be succesfull._
 
-- since git doesn't track empty folders so we use *.gitkeep* inside that file to track that folder.
+    -   .gitignore file to avoid some file to stay untracked , just write file name in the .gitignore files.
+
+-   since git doesn't track empty folders so we use _.gitkeep_ inside that file to track that folder.
 
 ## Behind the Scenes Git
-- git snapshot is a point in time in history of your code. It is not an Image, its just a representation of code at specific point. It stores info about the code in key-value database.
+
+-   git snapshot is a point in time in history of your code. It is not an Image, its just a representation of code at specific point. It stores info about the code in key-value database.
 
 ## 3 Musketeers of git
-- Commit Object (inside git folder, it references tree object which furthur references blob object.)
-- Contains:
-    - Tree Object
-    - Parent Commit Object
-    - Author
-    - Committer
-    - Commit Message
-*Example : **commit** 927bf32c829f877c664e512ec5737ef23bfcb5eb, **tree** f3eb325a62bb9c055fd09d55dc1401202dafff19, **parent** 241cc11fa403de46a622f970ad13cfacb4d1445c, **author** vasundhra gupta <vasundhragupta962@gmail.com> 1729966866 +0530, **committer** vasundhra gupta <vasundhragupta962@gmail.com> 1729966866 +0530, modify settings, cpp.md and .gitignore*
 
-- Tree Object (When changes/restore are done, then reference of the tree can be changed)
-- contains:
-    - File Mode
-    - File name
-    - File hash
-    - Parent Tree Object
-*Example : 100644  blob  1dcef2d9f2db74bf13c54f973f40239e00717423    .gitignore*
+-   Commit Object (inside git folder, it references tree object which furthur references blob object.)
+-   Contains: - Tree Object - Parent Commit Object - Author - Committer - Commit Message
+    _Example : **commit** 927bf32c829f877c664e512ec5737ef23bfcb5eb, **tree** f3eb325a62bb9c055fd09d55dc1401202dafff19, **parent** 241cc11fa403de46a622f970ad13cfacb4d1445c, **author** vasundhra gupta <vasundhragupta962@gmail.com> 1729966866 +0530, **committer** vasundhra gupta <vasundhragupta962@gmail.com> 1729966866 +0530, modify settings, cpp.md and .gitignore_
 
-- Blob Object (actual file/code that it need to save)
+-   Tree Object (When changes/restore are done, then reference of the tree can be changed)
+-   contains: - File Mode - File name - File hash - Parent Tree Object
+    _Example : 100644 blob 1dcef2d9f2db74bf13c54f973f40239e00717423 .gitignore_
+
+-   Blob Object (actual file/code that it need to save)
+
 ### Some commands to extract behind the scene Information.
+
 ```
     1.  git show -s --pretty=raw <commit-hash> (show commit object, commit hash from git log)
     2.  git ls-tree <tree-id>  (tree id from commit object, gone to upper folders and files, till get the blob, otherwise it would say not a tree object. (obvious) 😉)
     3.  git show <blob-id> (blob-id from tree object) **and this shows content of blob by blob-id**
     4.  git cat-file -p <commit-id> (get wtever next, like tree object or content)
 
-    2nd and 4th doing work in similar way, just going to next, 
+    2nd and 4th doing work in similar way, just going to next,
 ```
 
 Head points to the tip of current branch
@@ -698,18 +697,45 @@ Head points to the tip of current branch
     git switch <name> (switch)
     git switch -c <name> (create and switch)
     git checkout <name> (switch)
+    git branch -m <old> <new>
+    git branch -d <name>
 ```
+
 When changes are diffrent in files then, merge conflicts arises.
 
->>>>>>>>HEAD
--------
--------
-=======
--------
--------
->>>>>>>>>bug-fix
+## diff and stash
+
+-   a -> file A and b -> file B
+-   ---- indicates the file A (---- doesn't mean deletion, it just indicatethe file.)
+-   +++ indicates the file B
+-   @@ indicates the line number
+
+```
+    git diff (doesn't do by self anything, gives info abiut diffrences in diff files of diff branches)
+    *parameters more important*
+    git diff <branch1> <branch2>
+    git diff branch-name-one..branch-name-two
+    git diff <commit-hash-one> <commit-hash-two>
+```
+
+### git stash
+
+-   It is used when we want to save our changes at temoporary location.
+-   conflicting branches soesn't allow to merge until you commit them , so use git stash to avoid this.
+-   It is like a stack of changes that you can access later.
+
+- git stash
+- git stash list
+- git stash save "name of stash"
+- git stash apply (to revert back wat we saved on temporary location.)
+- git stash apply "stash@{0}"
+- git stash pop (apply and drop)
+- git stash drop (drop)
+- git stash clear (clear)
+- git stash apply stash@{0} <branchname>
+
+#### tags
+- git tag <tagname> (not generally used, used by product managers at time of release mainly.)
+- git tag -a <tag-name> -m "Release 1.0"
 </body>
 </html>
-
-
-
