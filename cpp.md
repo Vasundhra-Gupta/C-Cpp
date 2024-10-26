@@ -653,6 +653,36 @@
     ```
         git config --global core.editor "code --wait"
     ```
+    - Example: *When you write **git commit** alone without using message , now instead of vim , it would open in vscode,and wait for ur changes then write commit message in the newly opened file and just close it your commit will be succesfull.*
+
+    - .gitignore file to avoid some file to stay untracked , just write file name in the .gitignore files.
+
+- since git doesn't track empty folders so we use *.gitkeep* inside that file to track that folder.
+
+## Behind the Scenes Git
+- git snapshot is a point in time in history of your code. It is not an Image, its just a representation of code at specific point. It stores info about the code in key-value database.
+
+## 3 Musketeers of git
+- Commit Object (inside git folder, it references tree object which furthur references blob object.)
+- Contains:
+    - Tree Object
+    - Parent Commit Object
+    - Author
+    - Committer
+    - Commit Message
+- Tree Object (When changes/restore are done, then reference of the tree can be changed)
+- contains:
+    - File Mode
+    - File name
+    - File hash
+    - Parent Tree Object
+- Blob Object (actual file/code that it need to save)
+
+
+### Some commands to extract behind the scene Information.
+```
+    git show -s --pretty=raw <commit-hash>
+```
 </body>
 </html>
 
