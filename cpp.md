@@ -700,6 +700,14 @@ Head points to the tip of current branch
     git checkout <name> (switch)
 ```
 When changes are diffrent in files then, merge conflicts arises.
+
+>>>>>>>>HEAD
+-------
+-------
+=======
+-------
+-------
+>>>>>>>>>bug-fix
 </body>
 </html>
 
