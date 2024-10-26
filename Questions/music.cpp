@@ -1,0 +1,1 @@
+//have a class music containing song, title, artist, duration,, playlist, play song and skip yo next song
