@@ -749,5 +749,14 @@ rebase is always done on sub branch not main, and ensure u are on same branch u 
 (This is a commit in main branch!! LATEST!!)
 
 SO basically the issue is that merge commit doesnt do anything , it just merge the files, so to avoid this situation, we use rebase
+
+## GITHUB
+
+### setting up ssh(Secure Shell Protocol) key
+- instead of communication with id and password on command line, we gwenerate ssh key on our system , copy and give it to github, when request sent , github try to recognise  the signature (if same as your key sign or not)
+- The SSH agent manages your SSH keys and remembers your passphrase.
+
+- *To know how to generate ssh key visit github website...*
+- *ssh-keygen -t ed25519 -C "vasundhragupta962@gmail.com"*
 </body>
 </html>
