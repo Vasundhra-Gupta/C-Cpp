@@ -749,5 +749,7 @@ rebase is always done on sub branch not main, and ensure u are on same branch u 
 (This is a commit in main branch!! LATEST!!)
 
 SO basically the issue is that merge commit doesnt do anything , it just merge the files, so to avoid this situation, we use rebase
+
+- git reflog is used to give more precise history, commits
 </body>
 </html>
