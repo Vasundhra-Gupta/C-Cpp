@@ -741,5 +741,7 @@ When changes are diffrent in files then, merge conflicts arises.
 ## git rebase and reflog
 - rebase rewrites history.
 rebase is always done on sub branch not main, and ensure u are on same branch u want to rebase.
+
+(now in main branch , due to this coming commit ,it is ahead....)
 </body>
 </html>
