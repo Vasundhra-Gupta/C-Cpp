@@ -743,5 +743,7 @@ When changes are diffrent in files then, merge conflicts arises.
 rebase is always done on sub branch not main, and ensure u are on same branch u want to rebase.
 (added in notes branch)
 - It's like we commit something in new branch and then commit in main branch too afterwards, due to which main branch is ahead of new branch. Then we want the changes in new branch too, so we merge (which is an extra message???)
+
+(now in main branch , due to this coming commit ,it is ahead....)
 </body>
 </html>
