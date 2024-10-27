@@ -759,5 +759,17 @@ SO basically the issue is that merge commit doesnt do anything , it just merge t
 
 - *To know how to generate ssh key visit github website...*
 - *ssh-keygen -t ed25519 -C "vasundhragupta962@gmail.com"*
+
+- git remote -v (to check connection)
+- git remote add origin <link>
+- origin  https://github.com/Vasundhra-Gupta/Cpp.git (fetch)
+- origin  https://github.com/Vasundhra-Gupta/Cpp.git (push)
+- meaning fetch and push from same remote repository
+- git push <remotebranch name> <mybranchname>
+- git push origin main
+- git remove origin
+- git remote add upstream <remote-url> || or you can use shorthand: git remote add -u <remote-url>
+- setting upstream means , wtever pushed on main would be pushed to origin as well
+
 </body>
 </html>
