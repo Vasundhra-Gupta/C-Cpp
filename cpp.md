@@ -737,5 +737,9 @@ When changes are diffrent in files then, merge conflicts arises.
 #### tags
 - git tag <tagname> (not generally used, used by product managers at time of release mainly.)
 - git tag -a <tag-name> -m "Release 1.0"
+
+## git rebase and reflog
+- rebase rewrites history.
+rebase is always done on sub branch not main, and ensure u are on same branch u want to rebase.
 </body>
 </html>
