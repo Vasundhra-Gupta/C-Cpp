@@ -1,2 +1,3 @@
 ## C and C++
-This repo contains C and C++ Exercises
+C and C++ Exercises Including Several Topics
+Thankyou
